@@ -1,0 +1,87 @@
+
+.taskbar{
+  position: fixed;
+  z-index: 1000;
+  left:0;
+  top:0;
+  width:110px;
+  height: 100%;
+  background: #01213a;
+}
+.app-container{
+  padding-left: 110px;
+}
+.taskbar-logo{
+  width:100%;
+  height:100px;
+  background: #ff014f;
+}
+.taskbar-menu img{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-bottom: 30px
+}
+.taskbar-menu div{
+ border-bottom: solid 1px #ffffff10;
+  padding-top:10px;
+  cursor: pointer;
+
+}
+.an-mail{
+  width:80px;
+  height:80px;
+  background-color: #005d55;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: blinking 2s ease infinite;
+
+}
+.an-mail:hover{
+  animation: blinking 0.5s ease infinite;
+  cursor:pointer;
+}
+.an-mail-center{
+  width:60px;
+  height:60px;
+  background: #08afa8;
+  border-radius: 100%;
+}
+
+@keyframes blinking {
+  0%{background-color: #005d55;}
+  100%{background-color:#01213a;}
+}
+.logo{
+  width:30%;
+}
+
+@media(max-width: 900px){
+  .taskbar{
+    width:60px;
+  }
+  .app-container{
+    padding-left: 60px;
+  }
+  .taskbar-menu{
+    margin-block: 0!important;
+  }
+  .taskbar-menu img{
+    margin-bottom: 30px;
+  }
+  .an-mail{
+    width:60px;
+    height:60px;
+    margin-top:50px;
+
+  }
+  .an-mail-center{
+    width:40px;
+    height:40px;
+
+  }
+  .taskbar-footer{
+    margin-top:-30px
+  }
+}

@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+html, head,  body{
+  margin:0; padding:0;
+  width:100%;
+  height:100%;
+}
+
+body{
+  background:white;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+img[loadingIndicator]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: #007bff;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.buyProduct{
+  border:none;background: #ff014f;
+  border-radius: 2px;
+  color:white;
+  font-family: 'Tilt Warp', cursive;
+  padding:10px;
+  font-size:1.3em;
+}

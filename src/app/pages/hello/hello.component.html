@@ -1,0 +1,257 @@
+<div id="blackScreenHandler" class="blackScreenHandler" style="pointer-events: none;background: black;opacity:0; z-index: 1001; position: absolute; top:0; left:0; width:100%; height: 100vh"></div>
+<div  style="position:absolute; top:0;width: 100%;
+   background: #08afa8;
+   height: 50px;
+   border-bottom-right-radius: 200%;
+   box-shadow: 3px 3px 0px #08afa840;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   width:85%;
+   display: flex;
+   align-items: center;
+   font-family: 'Tilt Warp', cursive;
+   color:white;
+   ">
+  <img src="/assets/thermometer-sun.svg" style="margin-left:2px;">
+  {{currentWeather}}°C
+  <span style="font-family: Roboto; font-size:0.8em; margin-left: 10px;">Warszawa</span>
+</div>
+<div class="about" #about >
+  <div >
+    <p style="font-family: 'Roboto'; margin-block:0; color: #01213a">Agencja reklamowa </p>
+    <h1 style="margin-block:0;color: #01213a; font-size:3rem;">
+      Netexpress
+    </h1>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center">
+    <div style="width: fit-content; background: #ffffff80; display: flex; justify-content: center; align-items: center">
+    </div>
+  </div>
+</div>
+<div  style=" " class="greenBackground">
+</div>
+<div class="offers" style="font-family: 'Tilt Warp', cursive; color:white; padding-top:100px;"
+     (mousemove)="onMouseMove($event)"
+     #scrollable
+>
+  <div id="offer1" (mouseenter)="onMouseEnter('offer1')"
+       (mouseleave)="onMouseLeave('offer1')"
+       class="singleOffer" style="">
+    <div class="offer-img-bg" style="">
+      <img class="offer" src="/assets/robocall.png"  alt="" style="visibility: hidden" id='image1' (load)="loadImage('image1')">
+      <div id="image1_loader" style="font-family: Roboto">
+        <p class="loadP">Ładowanie...</p>
+        <div class="loadBar" style=""></div>
+      </div>
+    </div>
+    <div class="offer-img-title">
+      <h2>Robo Call</h2>
+    </div>
+  </div>
+  <div id="offer2" (mouseenter)="onMouseEnter('offer2')"
+       (mouseleave)="onMouseLeave('offer2')"
+       class="singleOffer" style="">
+    <div class="offer-img-bg"  >
+      <img class="offer" src="/assets/fb.png" alt="" style="visibility: hidden" id='image2' (load)="loadImage('image2')">
+      <div id="image2_loader" style="font-family: Roboto">
+        <p class="loadP">Ładowanie...</p>
+        <div class="loadBar" style=""></div>
+      </div>
+    </div>
+    <div class="offer-img-title">
+      <h2>Chatbot SocialMedia</h2>
+    </div>
+  </div>
+  <div id="offer3" (mouseenter)="onMouseEnter('offer3')"
+       (mouseleave)="onMouseLeave('offer3')"
+       class="singleOffer" style="">
+    <div class="offer-img-bg"  >
+      <img class="offer" src="/assets/shark1200.png" alt="" style="visibility: hidden" id='image3' (load)="loadImage('image3')">
+      <div id="image3_loader" style="font-family: Roboto">
+        <p class="loadP">Ładowanie...</p>
+        <div class="loadBar" style=""></div>
+      </div>
+    </div>
+    <div class="offer-img-title">
+      <h2>Pakiet Developer</h2>
+    </div>
+  </div>
+  <div id="offer4" (mouseenter)="onMouseEnter('offer4')"
+       (mouseleave)="onMouseLeave('offer4')"
+       class="singleOffer" style="">
+    <div class="offer-img-bg"  >
+      <img class="offer" src="/assets/tiger.png" alt="" style="visibility: hidden" id='image4' (load)="loadImage('image4')">
+      <div id="image4_loader" style="font-family: Roboto">
+        <p class="loadP">Ładowanie...</p>
+        <div class="loadBar" style=""></div>
+      </div>
+    </div>
+    <div class="offer-img-title">
+      <h2>SEO</h2>
+    </div>
+  </div>
+</div>
+<img src="/assets/wave.png" class="whiteWave">
+<div  *ngIf="state==='offer1'" >
+  <div style="font-family: 'Roboto';display: grid;grid-template-columns: 1fr 4fr" class="infoGrid" >
+    <div>
+      <img src="/assets/robotart.jpg" style="">
+    </div>
+    <div>
+      <h1 style="font-family: 'Tilt Warp', cursive; margin:0; "><span style="color:white; background:#08afa8;padding-inline:10px;border-radius:2px; ">RoboCall</span></h1>
+      <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">Nasz bot robocall to przyszłość marketingu! Dzięki coraz bardziej zaawansowanym rozwiązaniom AI, oferujemy narzędzie, które pozwoli Ci na wykonywanie dziesiątek tysięcy połączeń jednocześnie, bez konieczności angażowania ludzi do wykonywania tych działań. Nasz bot pozwoli Ci zwiększyć efektywność i skuteczność Twojej kampanii marketingowej, oszczędzając jednocześnie czas i koszty.
+        Nasza oferta to <b>nie tylko boty robocall</b>, ale również kompleksowe rozwiązania, które pozwolą Ci na automatyzację procesu zarządzania kontaktami z klientami. Dzięki integracji z <b>systemami CRM</b>, możesz łatwo monitorować wyniki kampanii, analizować dane i dostosowywać swoje działania, aby osiągnąć lepsze wyniki.
+        Wierzymy, że boty robocall to przyszłość marketingu i oferujemy najnowocześniejsze rozwiązania, które pozwolą Ci na osiągnięcie sukcesu w dzisiejszym zautomatyzowanym świecie. Wypróbuj nasze narzędzie już dziś i przekonaj się, jak łatwo można osiągnąć lepsze wyniki przy mniejszym nakładzie pracy i kosztów!
+      </p>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <p style="font-family: 'Work Sans', sans-serif;">
+      <p></p>
+    </div>
+  </div>
+  <div style="font-family: 'Roboto';display: grid;grid-template-columns: 1fr 4fr;" class="infoGrid" >
+    <div>
+      <img src="/assets/droid.jpg" style="float: left">
+    </div>
+    <div>
+      <h1 style="font-family: 'Tilt Warp', cursive; margin:0; "><span style="color:white; background:#08afa8;padding-inline:10px;border-radius:2px; ">System CRM</span></h1>
+      <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">Pakiet systemu CRM (zarządzania relacjami z klientami) dla robocall jest narzędziem, które umożliwia firmom prowadzenie działań związanych z pozyskiwaniem oraz obsługą klientów poprzez automatyczne wykonywanie połączeń telefonicznych.
+        <br/>
+        System ten pozwala na zbieranie, przechowywanie oraz analizę danych dotyczących klientów, co pozwala na bardziej efektywne prowadzenie kampanii marketingowych i sprzedażowych. Dzięki temu, można w łatwy sposób zarządzać kontaktami z klientami, a także zbierać i analizować informacje na temat ich preferencji, historii transakcji czy zapytań.
+        <br/>
+        <b>Pakiet systemu CRM dla robocall może oferować wiele funkcjonalności, takich jak:</b>
+      <ul>
+        <li> Automatyczne wykonywanie połączeń telefonicznych i przekierowywanie ich do odpowiednich agentów,</li>
+        <li>Rejestrowanie i przetwarzanie informacji o klientach,</li>
+        <li>Tworzenie list kontaktów i kampanii marketingowych,</li>
+        <li> Personalizacja treści i ofert,</li>
+        <li>Analiza danych i raportowanie,</li>
+        <li>Integracja z innymi narzędziami, takimi jak systemy mailingowe czy zarządzanie projektami.</li>
+        <li>Pakiet ten pozwala na zwiększenie efektywności działań związanych z pozyskiwaniem i obsługą klientów, co przekłada się na zwiększenie liczby sprzedaży i poprawę wizerunku firmy. Dzięki automatyzacji procesów, możliwe jest również oszczędzenie czasu i zasobów, a także zminimalizowanie błędów i niedociągnięć.</li>
+      </ul>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <p style="font-family: 'Work Sans', sans-serif;">
+      <p></p>
+    </div>
+  </div>
+</div>
+<div  *ngIf="state==='offer2'">
+  <div style="font-family: 'Roboto';display: grid;grid-template-columns: 1fr 4fr" class="infoGrid"  >
+    <div>
+      <img src="/assets/panda.jpg" style="float: left">
+    </div>
+    <div>
+      <h1 style="font-family: 'Tilt Warp', cursive; margin:0; "><span style="color:white; background:#08afa8;padding-inline:10px;border-radius:2px; ">Chatbot SocialMedia</span></h1>
+      <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">Oferujemy kompleksowy pakiet usług związanych z tworzeniem botów na portale społecznościowe, który pomoże Twojej firmie zwiększyć zasięg na mediach społecznościowych i wzmocnić jej obecność w sieci. Nasza oferta pakietu botów na portale społecznościowe obejmuje:
+        <br/><br/>
+        Analiza potrzeb:
+        Przeprowadzimy szczegółową analizę Twoich potrzeb związanych z botami na portale społecznościowe, aby w pełni zrozumieć, jakie funkcje botów będą dla Ciebie najbardziej przydatne.
+        <br/><br/>
+        Planowanie i projektowanie:
+        Na podstawie analizy potrzeb zaprojektujemy i zaplanujemy dla Ciebie funkcjonalny i intuicyjny interfejs bota, który będzie odpowiadał Twoim wymaganiom.
+        <br/><br/>
+        Integracja:
+        Zintegrujemy boty z Twoim kontem na portalu społecznościowym, co pozwoli na automatyzację procesów i zwiększenie skuteczności działań na portalu społecznościowym.
+        <br/><br/>
+        Testowanie i wdrażanie:
+        Przeprowadzimy testy botów, aby upewnić się, że działają one poprawnie i zgodnie z oczekiwaniami. Następnie wdrożymy je na Twoim koncie na portalu społecznościowym.
+        <br/><br/>
+        Monitorowanie i dostosowywanie:
+        Będziemy monitorować funkcjonowanie botów na bieżąco, aby upewnić się, że działają one zgodnie z oczekiwaniami. W razie potrzeby dostosujemy strategię działania botów.
+        <br/><br/>
+        Szkolenie:
+        Oferujemy szkolenia dla Twojego zespołu, aby pomóc im w pełni wykorzystać możliwości botów na portalu społecznościowym.
+        <br/><br/>
+        Dzięki naszemu pakietowi botów na portale społecznościowe Twoja firma będzie miała skuteczne narzędzia do automatyzacji procesów i zwiększenia skuteczności działań na portalach społecznościowych.
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+      <p style="font-family: 'Work Sans', sans-serif;">
+      <p></p>
+    </div>
+  </div>
+</div>
+<div  *ngIf="state==='offer3'">
+  <div style="font-family: 'Roboto';" >
+    <img src="/assets/dev.jpg" style="float: left">
+    <h1 style="font-family: 'Tilt Warp', cursive; margin:0; "><span style="color:white; background:#08afa8;padding-inline:10px;border-radius:2px; ">Pakiet Developer</span></h1>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">Pakiet Developer to kompleksowe rozwiązanie dla Twojej firmy, które pozwoli Ci zwiększyć swoją obecność w Internecie oraz osiągnąć sukces w dziedzinie reklamy i marketingu online. Oferujemy Ci następujące usługi:
+      <br/><br/>
+      Robocalle:
+      Dzięki naszej usłudze robocallów będziesz mógł szybko i skutecznie dotrzeć do swoich klientów i przekazać im ważne informacje o Twojej firmie.
+      <br/><br/>
+      Boty dla portali społecznościowych:
+      Stworzymy dla Ciebie inteligentne bota, który umożliwi Ci automatyzację procesów na portalach społecznościowych i ułatwi interakcję z Twoimi klientami.
+      <br/><br/>
+      Tworzenie stron internetowych:
+      Nasza agencja oferuje usługi projektowania i tworzenia stron internetowych, które będą idealnie dopasowane do potrzeb Twojej firmy i zapewnią jej atrakcyjny wygląd oraz optymalizację pod kątem SEO.
+      <br/><br/>
+      Zarządzanie pomocą IT:
+      Nasza agencja zapewni Ci wsparcie w zakresie zarządzania pomocą IT, dzięki czemu będziesz mógł skutecznie zarządzać swoją firmą i zapewnić jej szybki rozwój.
+      <br/><br/>
+      Dostosowywanie stron pod SEO:
+      Nasza agencja zajmuje się również optymalizacją stron pod kątem SEO, co pozwoli Ci zwiększyć ich widoczność w Internecie i przyciągnąć nowych klientów.
+      <br/><br/>
+      Z Pakietem Developer Twoja firma będzie miała kompleksowe rozwiązanie, które pozwoli Ci zwiększyć swoją obecność w Internecie i osiągnąć sukces w dziedzinie reklamy i marketingu online.
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <p style="font-family: 'Work Sans', sans-serif;">
+    <p></p>
+  </div>
+</div>
+<div  *ngIf="state==='offer4'">
+  <div style="width:100%; text-align: center">
+    <button class="buyProduct">Wyceń, dostosuj i zamów ten produkt!</button>
+  </div>
+  <div style="font-family: 'Roboto';" >
+    <img src="/assets/glass.jpg" style="float: left">
+    <h1 style="font-family: 'Tilt Warp', cursive; margin:0; "><span style="color:white; background:#08afa8;padding-inline:10px;border-radius:2px; ">SEO</span></h1>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">Oferujemy kompleksowe usługi w zakresie optymalizacji pod kątem SEO, które pomogą Twojej firmie zwiększyć widoczność w wyszukiwarkach internetowych i przyciągnąć nowych klientów. Nasza oferta SEO obejmuje:
+      <br/><br/>
+      Audyt SEO:
+      Przeprowadzimy szczegółowy audyt Twojej strony internetowej, w którym przeanalizujemy m.in. jej strukturę, treści, linki, a także przeprowadzimy analizę konkurencji. Dzięki temu będziemy mieć pełen obraz Twojej obecnej sytuacji w zakresie SEO.
+      <br/><br/>
+      Słowa kluczowe:
+      Dobierzemy dla Ciebie optymalne słowa kluczowe, które pozwolą na zwiększenie ruchu na Twojej stronie internetowej i przyciągnąć nowych klientów. Będziemy monitorować pozycję Twoich słów kluczowych na bieżąco i dostosowywać strategię SEO w razie potrzeby.
+      <br/><br/>
+      Optymalizacja techniczna:
+      Przeprowadzimy optymalizację techniczną Twojej strony internetowej, poprawiając jej szybkość ładowania, strukturę kodu, pliki robots.txt oraz mapę strony. Dzięki temu Twoja strona będzie lepiej zindeksowana przez wyszukiwarki internetowe.
+      <br/><br/>
+      Kreowanie treści:
+      Stworzymy dla Ciebie wartościowe i unikalne treści, które będą przyciągać użytkowników i zwiększać ruch na Twojej stronie. Treści te będą dostosowane pod kątem słów kluczowych i optymalizowane pod kątem SEO.
+      <br/><br/>
+      Link building:
+      Pomożemy Ci w budowaniu wartościowych linków do Twojej strony internetowej, co pozwoli na zwiększenie jej autorytetu i pozycji w wynikach wyszukiwania.
+      <br/><br/>
+      Analiza i raportowanie:
+      Regularnie monitorujemy wyniki naszych działań SEO i przekazujemy Ci raporty z postępów, abyś miał pełną kontrolę nad wynikami naszych działań.
+      <br/><br/>
+      Dzięki naszym usługom SEO Twoja strona internetowa będzie zyskiwać na widoczności w wyszukiwarkach internetowych, a Twoja firma będzie przyciągać nowych klientów.
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <h2 style="font-family: 'Tilt Warp', cursive; margin:0;margin-right: 5px; display: inline">__</h2>
+    <p style="font-family: 'Work Sans', sans-serif;">
+    <p></p>
+  </div>
+</div>
+<div class="author" style="width:100%; display: flex;flex-direction: column;  background:#001e35; padding-block:15px; font-family: 'Tilt Warp', cursive; color:white">
+  <div>
+    <img src="/assets/author.jpg" style="width: 250px; float:left; display: inline">
+    <h1 style="display: block; margin-bottom:0;">Mateusz Świderski</h1>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:0.8em;margin:0;">IT Engineer</p>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em;">FullStack Developer && UI/UX Designer</p>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em; font-style: italic; color: #001e35; background: white; width:fit-content">,,Nie bądźcie postrzegani jako agencja reklamowa, która sprzedaje produkty. Bądźcie postrzegani jako agencja, która rozwiązuje problemy''</p>
+    <p style="font-family: 'Work Sans', sans-serif;font-size:1.2em; font-style: italic; color: #001e35; background: white; width:fit-content"> "Reklama to umiejętność przekazywania wartości, nie tylko sprzedawania produktów."</p>
+  </div>
+</div>
+<ng-template #preload>
+  LOADING
+</ng-template>
+<ng-template #preloadImage>
+  LOADING IMG
+</ng-template>
